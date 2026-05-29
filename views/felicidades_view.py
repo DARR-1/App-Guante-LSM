@@ -8,7 +8,7 @@ def get_fview(router: Union[Router, str, None] = None):
             expand=True, 
             image=ft.DecorationImage(
                 src=f"/felicidades.gif", 
-                fit=ft.BoxFit.NONE,
+                fit=ft.BoxFit.COVER,
                 ),
         )
 

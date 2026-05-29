@@ -29,8 +29,8 @@ def main(page: ft.Page):
         router.body
     )
     
-    page.go('/bienvenido')
+    page.go('/home')
 
-    asyncio.create_task(delay_page(page, DELAY_BIENVENIDO, '/felicidades'))
+    #asyncio.create_task(delay_page(page, DELAY_BIENVENIDO, '/felicidades'))
 
 ft.app(target=main, assets_dir="assets")

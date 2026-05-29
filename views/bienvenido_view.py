@@ -8,7 +8,7 @@ def get_bview(router: Union[Router, str, None] = None):
             expand=True, 
             image=ft.DecorationImage(
                 src=f"/Bienvenido.gif", 
-                fit=ft.BoxFit.NONE,
+                fit=ft.BoxFit.COVER,
                 ),
         )
 
