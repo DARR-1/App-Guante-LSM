@@ -31,6 +31,11 @@ def main(page: ft.Page):
     
     page.go('/home')
 
+    page.bottom_appbar = NavBar(page)
+
     #asyncio.create_task(delay_page(page, DELAY_BIENVENIDO, '/felicidades'))
 
-ft.app(target=main, assets_dir="assets")
+ft.run(
+    main,
+    assets_dir="assets",
+)
