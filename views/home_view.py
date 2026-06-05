@@ -2,7 +2,7 @@ from typing import Union
 import flet as ft
 from Router import Router
 
-def get_home_view(router: Union[Router, str, None] = None):
+def get_home_view(router: Union[Router, str, None] = None, page: ft.Page = None):
     body = ft.Column(
         expand=True,
         alignment=ft.MainAxisAlignment.START,
@@ -58,20 +58,19 @@ def get_home_view(router: Union[Router, str, None] = None):
             ft.Row(
                 controls=[
                     ft.Container(
-                        content=ft.Image(src="/modo.png", fit=ft.BoxFit.CONTAIN),
+                        image=ft.DecorationImage(src="/MedusaRosaModo.png", fit=ft.BoxFit.CONTAIN),
                         bgcolor=ft.Colors.WHITE,
                         expand=True,
                         padding=20,
                         aspect_ratio=1,
                         border_radius=10,
                         ink=True,
-                        on_click=lambda _: print("Modo Traductor Clicked"),
+                        on_click=lambda _: page.go('/modulos'),
                     ),
                     ft.Container(expand=True),
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
             ),
-            ft.Text("Lengua de Señas", size=20, weight=ft.FontWeight.BOLD),
         ],
     )
 

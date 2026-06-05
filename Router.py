@@ -36,7 +36,7 @@ class Router:
             value = item.split("=")[1]
             self.data[key] = value.replace('+', ' ')
 
-        self.body.content = self.routes[_page](self)
+        self.body.content = self.routes[_page](self, self.page)
         self.body.update()
 
     def set_data(self, key, value):
