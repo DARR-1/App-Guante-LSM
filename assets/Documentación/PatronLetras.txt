@@ -1,0 +1,80 @@
+====================================================
+BASE DE DATOS DE PATRONES LSM
+====================================================
+
+Fuente:
+Arreglo patronesFlash[] almacenado en memoria Flash
+del ATmega.
+
+Formato:
+
+Indice | Letra | Flex  | Mov | Pres | Ori
+
+Flex:
+bit4 bit3 bit2 bit1 bit0
+
+Mov:
+0 = Sin movimiento
+1 = Movimiento detectado
+
+Pres:
+bit2 bit1 bit0
+
+Ori:
+bit1 bit0
+
+====================================================
+PATRONES
+====================================================
+
+Indice | Letra | Flex  | Mov | Pres | Ori
+------------------------------------------------
+0      | A     | 01111 | 0   | 011  | 00
+1      | B     | 00000 | 0   | 111  | 00
+2      | C     | 11111 | 0   | 001  | 01
+3      | D     | 10111 | 0   | 100  | 00
+4      | E     | 11111 | 0   | 101  | 00
+5      | F     | 11000 | 0   | 100  | 00
+6      | G     | 00111 | 0   | 010  | 11
+7      | H     | 00011 | 0   | 001  | 11
+8      | I     | 11110 | 0   | 111  | 01
+9      | J     | 11110 | 1   | 111  | 01
+10     | K     | 00011 | 1   | 110  | 01
+11     | L     | 00111 | 0   | 010  | 00
+12     | M     | 10001 | 0   | 101  | 10
+13     | N     | 10011 | 0   | 101  | 10
+14     | O     | 11111 | 0   | 101  | 01
+15     | P     | 00011 | 0   | 110  | 01
+16     | Q     | 11111 | 1   | 010  | 10
+17     | R     | 10011 | 0   | 111  | 00
+18     | S     | 11111 | 0   | 111  | 00
+19     | T     | 01111 | 0   | 111  | 00
+20     | U     | 10011 | 0   | 001  | 00
+21     | V     | 10011 | 0   | 000  | 00
+22     | W     | 10001 | 0   | 100  | 00
+23     | X     | 11111 | 1   | 010  | 11
+24     | Y     | 01110 | 0   | 111  | 11
+25     | Z     | 10111 | 1   | 110  | 10
+
+====================================================
+NOTAS
+====================================================
+
+- El índice corresponde a la posición de la letra
+  dentro del arreglo patronesFlash[] del ATmega.
+
+- Los valores se almacenan en memoria Flash usando
+  la estructura:
+
+    Patron
+    {
+        char letra;
+        uint8_t flex;
+        uint8_t movimiento;
+        uint8_t presion;
+        uint8_t orientacion;
+    };
+
+- Esta base de datos se utiliza como referencia
+  para depuración, validación y consulta desde la
+  aplicación.

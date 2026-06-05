@@ -10,6 +10,7 @@ class DataStrategyEnum(Enum):
 
 class Router:
     def __init__(self, data_strategy=DataStrategyEnum.QUERY):
+        self.page = None
         self.data_strategy = data_strategy
         self.routes = {}
         self.body = ft.Container(
@@ -38,6 +39,14 @@ class Router:
 
         self.body.content = self.routes[_page](self)
         self.body.update()
+
+        if route.route == "/bienvenido" or route.route == "/felicidades":
+            self.page.bottom_appbar.visible = False
+        else:
+            self.page.bottom_appbar.visible = True
+
+        self.page.update()
+            
 
     def set_data(self, key, value):
         self.data[key] = value

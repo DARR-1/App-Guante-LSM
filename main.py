@@ -16,6 +16,8 @@ async def delay_page(page: ft.Page, delay: int, route: str):
     page.go(route)
 
 def main(page: ft.Page):
+    router.page = page
+
     page.fonts = {
         "Quicksand": "/Quicksand-Bold.ttf",
         "Krabby Patty": "/Krabby Patty.ttf"
@@ -29,11 +31,11 @@ def main(page: ft.Page):
         router.body
     )
     
-    page.go('/home')
+    page.go('/bienvenido')
 
     page.bottom_appbar = NavBar(page)
 
-    #asyncio.create_task(delay_page(page, DELAY_BIENVENIDO, '/felicidades'))
+    asyncio.create_task(delay_page(page, DELAY_BIENVENIDO, '/home'))
 
 ft.run(
     main,

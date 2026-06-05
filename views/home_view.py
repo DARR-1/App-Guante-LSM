@@ -58,7 +58,7 @@ def get_home_view(router: Union[Router, str, None] = None):
             ft.Row(
                 controls=[
                     ft.Container(
-                        content=ft.Image(src="/modo.png", fit=ft.BoxFit.CONTAIN),
+                        content=ft.Image(src="/modo.jpg", fit=ft.BoxFit.CONTAIN),
                         bgcolor=ft.Colors.WHITE,
                         expand=True,
                         padding=20,
