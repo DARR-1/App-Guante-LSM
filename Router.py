@@ -37,7 +37,7 @@ class Router:
             value = item.split("=")[1]
             self.data[key] = value.replace('+', ' ')
 
-        self.body.content = self.routes[_page](self)
+        self.body.content = self.routes[_page](self, self.page)
         self.body.update()
 
         if route.route == "/bienvenido" or route.route == "/felicidades":
