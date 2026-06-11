@@ -19,9 +19,12 @@ def main(page: ft.Page):
     router.page = page
 
     page.fonts = {
-        "Quicksand": "/Quicksand-Bold.ttf",
-        "Krabby Patty": "/Krabby Patty.ttf"
+        "Quicksand": "assets/Fuentes/Quicksand-Bold.ttf",
+        "Krabby Patty": "assets/Fuentes/Krabby Patty.ttf"
     }
+    page.theme = ft.Theme(
+        font_family="Quicksand"
+    )
     page.padding = 0
     page.update()
 

@@ -18,7 +18,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
         controls=[
             ft.Row(
                 controls=[
-                    ft.Text("Módulos", size=24, weight=ft.FontWeight.BOLD),
+                    ft.Text("Modulos", size=26, weight=ft.FontWeight.BOLD, font_family="Krabby Patty"),
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
                 margin=ft.Margin(top=40)
@@ -30,7 +30,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                             controls=[
                                 ft.Container(
                                     image=ft.DecorationImage(
-                                        src="MedusaRosa.jpg",
+                                        src="assets/Media/MedusaAzul.jpg",
                                         fit=ft.BoxFit.COVER,
                                     ),
                                     shape=ft.BoxShape.CIRCLE,
@@ -38,7 +38,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                                 ),
                                 ft.Column(
                                     controls=[
-                                        ft.Text("Módulo 1", size=18, weight=ft.FontWeight.BOLD),
+                                        ft.Text("Modulo 1", size=18, weight=ft.FontWeight.BOLD, font_family="Krabby Patty"),
                                         ft.Text("Descripción del módulo 1.", size=10),
                                     ],
                                     expand=True,
@@ -51,7 +51,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                         aspect_ratio=2,
                         border_radius=10,
                         ink=True,
-                        on_click=lambda _: print("Módulo 1 clickeado"),
+                        on_click=lambda _: page.go('/lecciones/modulo1'),
                     ),
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
@@ -64,7 +64,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                             controls=[
                                 ft.Container(
                                     image=ft.DecorationImage(
-                                        src="MedusaAzul.jpg",
+                                        src="assets/Media/MedusaMorada.jpg",
                                         fit=ft.BoxFit.COVER,
                                     ),
                                     shape=ft.BoxShape.CIRCLE,
@@ -72,7 +72,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                                 ),
                                 ft.Column(
                                     controls=[
-                                        ft.Text("Módulo 2", size=18, weight=ft.FontWeight.BOLD),
+                                        ft.Text("Modulo 2", size=18, weight=ft.FontWeight.BOLD, font_family="Krabby Patty"),
                                         ft.Text("Descripción del módulo 2.", size=10),
                                     ],
                                     expand=True,
@@ -85,7 +85,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                         aspect_ratio=2,
                         border_radius=10,
                         ink=True,
-                        on_click=lambda _: print("Módulo 2 clickeado"),
+                        on_click=lambda _: page.go('/lecciones/modulo2'),
                     ),
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
@@ -98,7 +98,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                             controls=[
                                 ft.Container(
                                     image=ft.DecorationImage(
-                                        src="MedusaMorada.jpg",
+                                        src="assets/Media/MedusaVerde.jpg",
                                         fit=ft.BoxFit.COVER,
                                     ),
                                     shape=ft.BoxShape.CIRCLE,
@@ -106,7 +106,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                                 ),
                                 ft.Column(
                                     controls=[
-                                        ft.Text("Módulo 3", size=18, weight=ft.FontWeight.BOLD),
+                                        ft.Text("Modulo 3", size=18, weight=ft.FontWeight.BOLD, font_family="Krabby Patty"),
                                         ft.Text("Descripción del módulo 3.", size=10),
                                     ],
                                     expand=True,
@@ -119,7 +119,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                         aspect_ratio=2,
                         border_radius=10,
                         ink=True,
-                        on_click=lambda _: print("Módulo 3 clickeado"),
+                        on_click=lambda _: page.go('/lecciones/modulo3 '),
                     ),
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
@@ -132,7 +132,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                             controls=[
                                 ft.Container(
                                     image=ft.DecorationImage(
-                                        src="MedusaVerde.jpg",
+                                        src="assets/Media/MedusaAmarilla.jpg",
                                         fit=ft.BoxFit.COVER,
                                     ),
                                     shape=ft.BoxShape.CIRCLE,
@@ -140,7 +140,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                                 ),
                                 ft.Column(
                                     controls=[
-                                        ft.Text("Módulo 4", size=18, weight=ft.FontWeight.BOLD),
+                                        ft.Text("Modulo 4", size=18, weight=ft.FontWeight.BOLD, font_family="Krabby Patty"),
                                         ft.Text("Descripción del módulo 4.", size=10),
                                     ],
                                     expand=True,
@@ -153,7 +153,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                         aspect_ratio=2,
                         border_radius=10,
                         ink=True,
-                        on_click=lambda _: print("Módulo 4 clickeado"),
+                        on_click=lambda _: page.go('/lecciones/modulo4'),
                     ),
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
@@ -166,7 +166,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                             controls=[
                                 ft.Container(
                                     image=ft.DecorationImage(
-                                        src="MedusaAmarilla.jpg",
+                                        src="assets/Media/MedusaNaranja.jpg",
                                         fit=ft.BoxFit.COVER,
                                     ),
                                     shape=ft.BoxShape.CIRCLE,
@@ -174,7 +174,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                                 ),
                                 ft.Column(
                                     controls=[
-                                        ft.Text("Módulo 5", size=18, weight=ft.FontWeight.BOLD),
+                                        ft.Text("Modulo 5", size=18, weight=ft.FontWeight.BOLD, font_family="Krabby Patty"),
                                         ft.Text("Descripción del módulo 5.", size=10),
                                     ],
                                     expand=True,
@@ -187,41 +187,7 @@ def get_modulos_view(router: Union[Router, str, None] = None, page: ft.Page = No
                         aspect_ratio=2,
                         border_radius=10,
                         ink=True,
-                        on_click=lambda _: print("Módulo 5 clickeado"),
-                    ),
-                ],
-                alignment=ft.MainAxisAlignment.CENTER,
-                spacing=20,
-            ),
-            ft.Row(
-                controls=[
-                    ft.Container(
-                        content=ft.Row(
-                            controls=[
-                                ft.Container(
-                                    image=ft.DecorationImage(
-                                        src="MedusaNaranja.jpg",
-                                        fit=ft.BoxFit.COVER,
-                                    ),
-                                    shape=ft.BoxShape.CIRCLE,
-                                    expand=True
-                                ),
-                                ft.Column(
-                                    controls=[
-                                        ft.Text("Módulo 6", size=18, weight=ft.FontWeight.BOLD),
-                                        ft.Text("Descripción del módulo 6.", size=10),
-                                    ],
-                                    expand=True,
-                                )
-                            ]
-                        ),
-                        bgcolor=ft.Colors.with_opacity(0.8, ft.Colors.WHITE),
-                        expand=True,
-                        padding=20,
-                        aspect_ratio=2,
-                        border_radius=10,
-                        ink=True,
-                        on_click=lambda _: print("Módulo 6 clickeado"),
+                        on_click=lambda _: page.go('/lecciones/modulo5'),
                     ),
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,

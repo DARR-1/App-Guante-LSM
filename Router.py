@@ -16,7 +16,7 @@ class Router:
         self.body = ft.Container(
             expand=True, 
             image=ft.DecorationImage( 
-                src="Fondo.jpg",
+                src="assets/Media/Fondo.jpg",
                 fit=ft.BoxFit.COVER,
                 ),
         )
